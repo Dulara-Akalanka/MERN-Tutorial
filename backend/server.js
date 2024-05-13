@@ -32,6 +32,8 @@ mongoose.connect(process.env.MONG_URI)
 
 
 
+    
+
 //routes
 // app.get('/', (req, res) => {
 //     res.json({mssg:'hellow'})
