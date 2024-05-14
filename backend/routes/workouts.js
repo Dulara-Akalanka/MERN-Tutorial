@@ -3,7 +3,7 @@ const Workout = require('../models/workoutModel')
 const {
     createWorkout,
     getWorkouts,
-    getSingleWorkout,
+    getWorkout,
     updateWorkout,
     deleteWorkout,
 } = require('../controllers/workoutController')
@@ -14,7 +14,7 @@ const router = express.Router()
 router.get('/', getWorkouts)
 
 //GEt a single workout
-router.get('/:id',getSingleWorkout)
+router.get('/:id',getWorkout)
 
 //POST a new workout
 router.post('/', createWorkout)
