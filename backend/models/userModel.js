@@ -18,8 +18,9 @@ const userSchema = new Schema({
 
 //static signup method
 userSchema.statics.signup = async function(email, password){
-
+    
     if(!email || !password){
+        console.log(email, password)
         throw Error('All fields must be filled')
     }
     if(!validator.isEmail(email)){
@@ -44,4 +45,4 @@ userSchema.statics.signup = async function(email, password){
 
 }
 
-module.export = mongoose.model('User', userSchema)
+module.exports = mongoose.model('User', userSchema)
